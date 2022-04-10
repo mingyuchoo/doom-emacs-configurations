@@ -78,3 +78,10 @@
 ;; set stylish-haskell for Haskell
 (setq haskell-stylish-on-save t)
 
+;; no startup message
+(setq inhibit-startup-message t)
+(setq initial-scratch-message "")
+
+;; remove *messages* from the buffer
+(setq-default message-log-max nil)
+(kill-buffer "*Messages*")
