@@ -1,5 +1,21 @@
 # doom-emacs-setting
 
+## Install Doom Emacs
+
+```bash
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+cd ~/.emacs.d/bin
+./doom sync
+```
+
+## Add `$HOME/.emacs.d/bin` to `$PATH`
+
+```bash
+...
+export $PATH="$HOME/.emacs.d/bin":$PATH"
+```
+
 ## Reference 
 
 -<https://github.com/hlissner/doom-emacs>
