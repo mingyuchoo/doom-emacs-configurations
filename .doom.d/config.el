@@ -75,6 +75,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; doom-themes
+(setq doom-theme 'doom-outrun-electric)
+
 ;; set stylish-haskell for Haskell
 (setq haskell-stylish-on-save t)
 
