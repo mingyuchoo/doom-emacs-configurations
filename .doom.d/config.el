@@ -88,3 +88,6 @@
 ;; remove *messages* from the buffer
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*")
+
+;; set relative line numbers
+(setq display-line-numbers-type 'relative)
