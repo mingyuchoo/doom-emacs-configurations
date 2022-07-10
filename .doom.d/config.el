@@ -76,7 +76,7 @@
 ;; they are implemented.
 
 ;; doom-themes
-(setq doom-theme 'doom-outrun-electric)
+;;(setq doom-theme 'doom-outrun-electric)
 
 ;; set stylish-haskell for Haskell
 (setq haskell-stylish-on-save t)
