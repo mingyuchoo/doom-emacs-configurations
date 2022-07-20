@@ -91,3 +91,6 @@
 
 ;; set relative line numbers
 (setq display-line-numbers-type 'relative)
+
+;; resize neotree width
+(setq neo-window-width 40)
