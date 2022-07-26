@@ -2,7 +2,7 @@
 
 ## Install Doom Emacs
 
-```bash
+```sh
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 $HOME/.emacs.d/bin/doom install
 $HOME/.emacs.d/bin/doom sync
@@ -10,9 +10,30 @@ $HOME/.emacs.d/bin/doom sync
 
 ## Add `$HOME/.emacs.d/bin` to `$PATH`
 
-```bash
+```sh
 ...
 export $PATH="$HOME/.emacs.d/bin":$PATH"
+```
+
+## Improve startup time
+
+To start the server run
+
+```sh
+emacs --daemon
+```
+
+And then to start a client run
+
+```sh
+emacsclient -nw -c
+```
+
+Other solutions in `.bashrc`
+
+```sh
+alias e="emacsclient -t -a \"\""
+alias ec="emacsclient -c -a \"\""
 ```
 
 ## Reference 
