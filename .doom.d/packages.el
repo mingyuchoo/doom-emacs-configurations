@@ -49,6 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-;;(package! haskell-mode)
-;;(package! lsp-haskell)
+(package! haskell-mode)
+(package! lsp-haskell)
 
