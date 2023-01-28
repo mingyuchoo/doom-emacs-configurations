@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://github.com/mingyuchoo/doom-emacs-setting/issues"><img alt="Issues" src="https://img.shields.io/github/issues/mingyuchoo/doom-emacs-setting?color=appveyor" /></a>
+  <a href="https://github.com/mingyuchoo/doom-emacs-setting/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/mingyuchoo/doom-emacs-setting?color=appveyor" /></a>
+</p>
+
 # doom-emacs-setting
 
 ## Install Doom Emacs
