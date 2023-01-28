@@ -29,14 +29,14 @@
        :ui
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
-       doom-dashboard    ; a nifty splash screen for Emacs
+       ;;doom-dashboard    ; a nifty splash screen for Emacs
        ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
        ;;(emoji +unicode)  ; 🙂
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
-       ;;indent-guides     ; highlighted indent columns
-       ;;ligatures         ; ligatures and symbols to make your code pretty again
-       ;;minimap           ; show a map of the code on the side
+       indent-guides     ; highlighted indent columns
+       ligatures         ; ligatures and symbols to make your code pretty again
+       minimap           ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
        ;;nav-flash         ; blink cursor line after big motions
        neotree           ; a project drawer, like NERDTree for vim
@@ -44,10 +44,10 @@
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        ;;tabs              ; a tab bar for Emacs
        ;;treemacs          ; a project drawer, like neotree but cooler
-       ;;unicode           ; extended unicode support for various languages
+       unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
-       ;;window-select     ; visually switch windows
+       window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
        ;;zen               ; distraction-free coding or writing
 
@@ -73,7 +73,7 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
-       ;;eshell            ; the elisp shell that works everywhere
+       eshell            ; the elisp shell that works everywhere
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
        ;;vterm             ; the best terminal emulation in Emacs
@@ -121,7 +121,7 @@
        ;;csharp            ; unity, .NET, and mono shenanigans
        ;;data              ; config/data formats
        ;;(dart +flutter)   ; paint ui and not much else
-       ;;dhall
+       dhall
        elixir            ; erlang done right
        elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
@@ -133,19 +133,20 @@
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
-       ;;(go +lsp)         ; the hipster dialect
+       (go +lsp)         ; the hipster dialect
+       (graphql +lsp)      ; Give queries a REST
        (haskell +lsp)    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
        json              ; At least it ain't XML
-       ;;(java +lsp)       ; the poster child for carpal tunnel syndrome
+       (java +lsp)       ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
-       julia             ; a better, faster MATLAB
+       ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
-       ;;latex             ; writing papers in Emacs has never been so fun
+       latex             ; writing papers in Emacs has never been so fun
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
-       ;;lua               ; one-based indices? one-based indices
+       lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
        nix               ; I hereby declare "nix geht mehr!"
@@ -169,9 +170,9 @@
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       web               ; the tubes
+       ;;web               ; the tubes
        yaml              ; JSON, but readable
-       ;;zig               ; C, but simpler
+       zig               ; C, but simpler
 
        :email
        ;;(mu4e +org +gmail)
