@@ -21,6 +21,12 @@ $HOME/.emacs.d/bin/doom sync
 export $PATH="$HOME/.emacs.d/bin":$PATH"
 ```
 
+## Use `vterm` in Emacs
+
+```bash
+sudo apt install -y libvterm-dev
+```
+
 ## Improve startup time
 
 To start the server run
@@ -38,8 +44,7 @@ emacsclient -nw -c
 Other solutions in `.bashrc`
 
 ```bash
-alias e="emacsclient -t -a \"\""
-alias ec="emacsclient -c -a \"\""
+alias de="emacsclient -t -a \"\""
 ```
 
 ## Reference
