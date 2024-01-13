@@ -9,16 +9,16 @@
 ## Install Doom Emacs
 
 ```bash
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-$HOME/.emacs.d/bin/doom install
-$HOME/.emacs.d/bin/doom sync
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+$HOME/.config/emacs/bin/doom install
+$HOME/.config/emacs/bin/doom sync
 ```
 
 ## Add `$HOME/.emacs.d/bin` to `$PATH`
 
 ```bash
 ...
-export $PATH="$HOME/.emacs.d/bin":$PATH"
+export $PATH="$HOME/.config/emacs/bin:$PATH"
 ```
 
 ## Use `vterm` in Emacs
