@@ -6,7 +6,18 @@
 
 # doom-emacs-setting
 
-## Install Doom Emacs
+## Install Doom Emacs on macOS
+
+Install Emacs first
+
+```bash
+brew install emacs
+brew install coreutils
+brew install grep
+brew install pandoc
+```
+
+Install Doomemacs and sync it
 
 ```bash
 git clone --depth 1 --single-branch https://github.com/doomemacs/doomemacs ~/.config/emacs
@@ -20,12 +31,6 @@ $HOME/.config/emacs/bin/doom doctor
 ```bash
 ...
 export $PATH="$HOME/.config/emacs/bin:$PATH"
-```
-
-## Use `vterm` in Emacs on Ubuntu
-
-```bash
-sudo apt install -y libvterm-dev
 ```
 
 ## Improve startup time
