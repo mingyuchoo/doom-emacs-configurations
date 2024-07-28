@@ -9,9 +9,10 @@
 ## Install Doom Emacs
 
 ```bash
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+git clone --depth 1 --single-branch https://github.com/doomemacs/doomemacs ~/.config/emacs
 $HOME/.config/emacs/bin/doom install
 $HOME/.config/emacs/bin/doom sync
+$HOME/.config/emacs/bin/doom doctor
 ```
 
 ## Add `$HOME/.emacs.d/bin` to `$PATH`
@@ -21,7 +22,7 @@ $HOME/.config/emacs/bin/doom sync
 export $PATH="$HOME/.config/emacs/bin:$PATH"
 ```
 
-## Use `vterm` in Emacs
+## Use `vterm` in Emacs on Ubuntu
 
 ```bash
 sudo apt install -y libvterm-dev
