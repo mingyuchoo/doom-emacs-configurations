@@ -79,9 +79,6 @@
 ;; doom-themes
 (setq doom-theme 'doom-outrun-electric)
 
-;; set stylish-haskell for Haskell
-(setq haskell-stylish-on-save t)
-
 ;; no startup message
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
@@ -95,3 +92,9 @@
 
 ;; resize neotree with
 (setq neo-window-width 40)
+
+;; set stylish-haskell for Haskell
+(setq haskell-stylish-on-save t)
+
+;; The SBCL binary and command-line arguments
+(setq inferior-lisp-program "sbcl")
