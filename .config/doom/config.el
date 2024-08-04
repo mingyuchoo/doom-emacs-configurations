@@ -99,4 +99,4 @@
 ;; The SBCL binary and command-line arguments
 (after! slime
   (load (expand-file-name "~/.quicklisp/slime-helper.el"))
-  (setq inferior-lisp-program "sbcl"))
+  (setq inferior-lisp-program "rlwrap sbcl"))

@@ -15,6 +15,7 @@ brew install emacs
 brew install coreutils
 brew install grep
 brew install pandoc
+brew install rlwrap # for SBCL REPL
 ```
 
 Install Doomemacs and sync it
@@ -55,8 +56,4 @@ alias de="emacsclient -t -a \"\""
 
 ## Reference
 
--<https://github.com/hlissner/doom-emacs>
-
--<https://github.com/hlissner/doom-emacs/blob/master/docs/getting_started.org>
-
--<https://gist.github.com/ecthiender/b9db474e80113bdc18d472de1593eb3c>
+-<https://github.com/hlissner/doom-emacs> -<https://github.com/hlissner/doom-emacs/blob/master/docs/getting_started.org> -<https://gist.github.com/ecthiender/b9db474e80113bdc18d472de1593eb3c>
