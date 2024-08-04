@@ -76,6 +76,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; activate emacs keybindings
+(setq evil-default-state 'emacs)
 
 ;; doom-themes
 (setq doom-theme 'doom-outrun-electric)
