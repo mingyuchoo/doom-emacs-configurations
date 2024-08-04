@@ -97,4 +97,6 @@
 (setq haskell-stylish-on-save t)
 
 ;; The SBCL binary and command-line arguments
-(setq inferior-lisp-program "sbcl")
+(after! slime
+  (load (expand-file-name "~/.quicklisp/slime-helper.el"))
+  (setq inferior-lisp-program "sbcl"))
