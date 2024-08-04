@@ -49,5 +49,9 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+;; For Haskell programming
 (package! haskell-mode)
 (package! lsp-haskell)
+
+;; For SBCL Common Lisp programming
+(package! slime)
