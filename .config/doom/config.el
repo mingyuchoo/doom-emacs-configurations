@@ -79,9 +79,6 @@
 ;; activate emacs keybindings
 (setq evil-default-state 'emacs)
 
-;; doom-themes
-(setq doom-theme 'doom-outrun-electric)
-
 ;; no startup message
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
