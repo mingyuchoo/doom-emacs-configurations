@@ -49,9 +49,15 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+
+;; Cursors
+(package! evil-terminal-cursor-changer)
+
+
 ;; For Haskell programming
 (package! haskell-mode)
 (package! lsp-haskell)
 
-;; For SBCL Common Lisp programming
+
+;; For SBCL common lisp programming
 (package! slime)

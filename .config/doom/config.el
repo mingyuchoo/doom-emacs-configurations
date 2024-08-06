@@ -76,28 +76,47 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; C-h to Backspace
-(global-set-key (kbd "C-h") 'delete-backward-char)
 
-;; activate emacs keybindings
-(setq evil-default-state 'emacs)
+;; Cursors
+(use-package! evil-terminal-cursor-changer
+  :hook (tty-setup . evil-terminal-cursor-changer-activate))
+
+(setq evil-motion-state-cursor 'box)  ; █
+(setq evil-visual-state-cursor 'box)  ; █
+(setq evil-normal-state-cursor 'box)  ; █
+(setq evil-insert-state-cursor 'bar)  ; ⎸
+(setq evil-emacs-state-cursor 'hbar)  ; _
+
+;; Activate emacs keybindings
+;;(setq evil-default-state 'emacs)
+
+
+;; Keybindings
+(map! :nvi "C-k" #'kill-line)
+(map! :nvi "C-h" #'backward-delete-char-untabify)
+
 
 ;; no startup message
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
 
+
 ;; remove *messages* from the buffer
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*")
 
+
 ;; set relative line numbers
 (setq display-line-numbers-type 'relative)
+
 
 ;; resize neotree with
 (setq neo-window-width 40)
 
+
 ;; set stylish-haskell for Haskell
 (setq haskell-stylish-on-save t)
+
 
 ;; The SBCL binary and command-line arguments
 (after! slime
