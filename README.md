@@ -34,6 +34,14 @@ $HOME/.config/emacs/bin/doom doctor
 export $PATH="$HOME/.config/emacs/bin:$PATH"
 ```
 
+
+## Install fonts
+
+Run emacs, and do this to install fonts
+
+`M-x nerd-icons-install-fonts``
+
+
 ## Improve startup time
 
 To start the server run
