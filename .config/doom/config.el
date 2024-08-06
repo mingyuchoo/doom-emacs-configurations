@@ -91,6 +91,16 @@
 ;;(setq evil-default-state 'emacs)
 
 
+(setq evil-disable-insert-state-bindings t)
+(evil-define-key 'insert 'global
+  (kbd "C-f") 'forward-char
+  (kbd "C-b") 'backward-char
+  (kbd "C-n") 'next-line
+  (kbd "C-p") 'previous-line
+  (kbd "C-a") 'move-beginning-of-line
+  (kbd "C-e") 'move-end-of-line)
+
+
 ;; Keybindings
 (map! :nvi "C-k" #'kill-line)
 (map! :nvi "C-h" #'backward-delete-char-untabify)
