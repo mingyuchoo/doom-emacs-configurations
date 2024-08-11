@@ -132,3 +132,22 @@
 (after! slime
   (load (expand-file-name "~/.quicklisp/slime-helper.el"))
   (setq inferior-lisp-program "rlwrap sbcl"))
+
+
+;; Org-mode and Org-roam
+(progn
+  (require 'org-bullets)
+  (setq org-startup-folded 'content)
+  (setq org-startup-indented t)
+  (setq org-hide-emphasis-markers t)
+  (setq org-log-done 'time)
+  (setq org-todo-keywords
+  '((sequence "TODO" "DOING" "BLOCKED" "DONE"))))
+
+
+;; Eshell
+(set-eshell-alias! "ll"    "ls -l $*"
+                   "la"    "ls -la $*"
+                   "mkdir" "mkdir -p $*"
+                   "clear" "eshell/clear-scrollback"
+                   "open"  "find-file $1")
