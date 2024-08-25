@@ -78,46 +78,41 @@
 
 
 ;; Cursors
-(use-package! evil-terminal-cursor-changer
-  :hook (tty-setup . evil-terminal-cursor-changer-activate))
+(progn
+  (use-package! evil-terminal-cursor-changer
+    :hook (tty-setup . evil-terminal-cursor-changer-activate))
+  (setq evil-motion-state-cursor 'box)  ; █
+  (setq evil-visual-state-cursor 'box)  ; █
+  (setq evil-normal-state-cursor 'box)  ; █
+  (setq evil-insert-state-cursor 'bar)  ; ⎸
+  (setq evil-emacs-state-cursor 'hbar)) ; _
 
-(setq evil-motion-state-cursor 'box)  ; █
-(setq evil-visual-state-cursor 'box)  ; █
-(setq evil-normal-state-cursor 'box)  ; █
-(setq evil-insert-state-cursor 'bar)  ; ⎸
-(setq evil-emacs-state-cursor 'hbar)  ; _
-
-;; Activate emacs keybindings
-;;(setq evil-default-state 'emacs)
-
-
-(setq evil-disable-insert-state-bindings t)
-(evil-define-key 'insert 'global
-  (kbd "C-f") 'forward-char
-  (kbd "C-b") 'backward-char
-  (kbd "C-n") 'next-line
-  (kbd "C-p") 'previous-line
-  (kbd "C-a") 'move-beginning-of-line
-  (kbd "C-e") 'move-end-of-line)
 
 
 ;; Keybindings
-(map! :nvi "C-k" #'kill-line)
-(map! :nvi "C-h" #'backward-delete-char-untabify)
+(progn
+  (map! :nvi "C-k" #'kill-line)
+  (map! :nvi "C-h" #'backward-delete-char-untabify)
+  (setq evil-disable-insert-state-bindings t)
+  (evil-define-key 'insert 'global
+    (kbd "C-f") 'forward-char
+    (kbd "C-b") 'backward-char
+    (kbd "C-n") 'next-line
+    (kbd "C-p") 'previous-line
+    (kbd "C-a") 'move-beginning-of-line
+    (kbd "C-e") 'move-end-of-line))
 
 
 ;; no startup message
-(setq inhibit-startup-message t)
-(setq initial-scratch-message "")
-
-
-;; remove *messages* from the buffer
-(setq-default message-log-max nil)
-(kill-buffer "*Messages*")
+(progn
+  (setq inhibit-startup-message t)
+  (setq initial-scratch-message "")
+  (setq-default message-log-max nil)
+  (kill-buffer "*Messages*"))
 
 
 ;; set relative line numbers
-(setq display-line-numbers-type 'relative)
+;;(setq display-line-numbers-type 'relative)
 
 
 ;; resize neotree with
@@ -133,21 +128,20 @@
   (load (expand-file-name "~/.quicklisp/slime-helper.el"))
   (setq inferior-lisp-program "rlwrap sbcl"))
 
-
 ;; Org-mode and Org-roam
 (progn
-  (require 'org-bullets)
+  (use-package! org-bullets)
   (setq org-startup-folded 'content)
   (setq org-startup-indented t)
   (setq org-hide-emphasis-markers t)
   (setq org-log-done 'time)
   (setq org-todo-keywords
-  '((sequence "TODO" "DOING" "BLOCKED" "DONE"))))
+        '((sequence "TODO" "DOING" "BLOCKED" "DONE"))))
 
 
 ;; Eshell
-(set-eshell-alias! "ll"    "ls -l $*"
-                   "la"    "ls -la $*"
+(set-eshell-alias! "ll" "ls -l $*"
+                   "la" "ls -la $*"
                    "mkdir" "mkdir -p $*"
                    "clear" "eshell/clear-scrollback"
-                   "open"  "find-file $1")
+                   "open" "find-file $1")
