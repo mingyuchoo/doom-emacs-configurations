@@ -111,10 +111,6 @@
   (kill-buffer "*Messages*"))
 
 
-;; set relative line numbers
-;;(setq display-line-numbers-type 'relative)
-
-
 ;; resize neotree with
 (setq neo-window-width 40)
 
@@ -127,6 +123,7 @@
 (after! slime
   (load (expand-file-name "~/.quicklisp/slime-helper.el"))
   (setq inferior-lisp-program "rlwrap sbcl"))
+
 
 ;; Org-mode and Org-roam
 (progn
