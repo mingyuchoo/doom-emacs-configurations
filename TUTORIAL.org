@@ -1,0 +1,13 @@
+* Emacs Tutorial
+** Concepts
+*** Workspace
+특정 프로젝트나 작업 환경을 논리적으로 묶은 작업공간
+각 workspace는 독립적인 frame을 가질 수 있음
+*** Frame (window)
+Emacs에서 최상위 출력  구성요소
+하나의 workspace는 여러 frame을  가질 수 있음
+*** Window (pane)
+frame 안에 여러 개로 분할된 화면 영역
+하나의 frame은 여러 window를 가질 수 있음
+*** Buffer (document)
+작업할 내용
