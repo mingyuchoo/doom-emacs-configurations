@@ -88,15 +88,15 @@
   (setq evil-emacs-state-cursor 'hbar)) ; _
 
 
-
 ;; Keybindings
 (progn
-  (map! :nvi "C-k" #'kill-line)
-  (map! :nvi "C-h" #'backward-delete-char-untabify)
   (setq evil-disable-insert-state-bindings t)
   (evil-define-key 'insert 'global
+    (kbd "C-h") 'backward-delete-char-untabify
+    (kbd "C-k") 'kill-line
     (kbd "C-f") 'forward-char
     (kbd "C-b") 'backward-char
+    (kbd "C-d") 'delete-char
     (kbd "C-n") 'next-line
     (kbd "C-p") 'previous-line
     (kbd "C-a") 'move-beginning-of-line
