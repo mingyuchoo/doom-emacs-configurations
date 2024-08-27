@@ -151,3 +151,15 @@
                    "mkdir" "mkdir -p $*"
                    "clear" "eshell/clear-scrollback"
                    "open" "find-file $1")
+
+
+;; Doom keybindings for Treemacs
+(progn
+  (after! treemacs
+    (treemacs-follow-mode 1))
+  (map! :leader
+        :desc "Select Treemacs window"
+        "t t" #'treemacs-select-window)
+  (map! :leader
+        :desc "Toogle Treemacs follow mode"
+        "t f" #'treemacs-follow-mode))
