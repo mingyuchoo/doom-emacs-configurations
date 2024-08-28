@@ -146,11 +146,15 @@
 
 
 ;; Eshell
-(set-eshell-alias! "ll" "ls -l $*"
-                   "la" "ls -la $*"
-                   "mkdir" "mkdir -p $*"
-                   "clear" "eshell/clear-scrollback"
-                   "open" "find-file $1")
+(progn
+  (map! :leader
+        :desc "Open eshell"
+        "o s" #'eshell)
+  (set-eshell-alias! "ll"    "ls -l $*"
+                     "la"    "ls -la $*"
+                     "mkdir" "mkdir -p $*"
+                     "clear" "eshell/clear-scrollback"
+                     "open"  "find-file $1"))
 
 
 ;; Doom keybindings for Treemacs
