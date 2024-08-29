@@ -147,9 +147,9 @@
 
 ;; Eshell
 (progn
-  (map! :leader
-        :desc "Open eshell"
-        "o s" #'eshell)
+  ;;(map! :leader
+  ;;      :desc "Open eshell"
+  ;;      "o s" #'eshell)
   (set-eshell-alias! "ll"    "ls -l $*"
                      "la"    "ls -la $*"
                      "mkdir" "mkdir -p $*"
