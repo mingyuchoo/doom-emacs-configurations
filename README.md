@@ -44,10 +44,11 @@ Run emacs, and do this to install fonts
 
 ## Improve startup time
 
-To start the server run
+To start the server run on Arch Linux
 
 ```bash
-emacs --daemon
+# emacs --daemon
+systemctl --user enable --now emacs
 ```
 
 And then to start a client run
@@ -59,9 +60,16 @@ emacsclient -nw -c
 Other solutions in `.bashrc`
 
 ```bash
-alias de="emacsclient -t -a \"\""
+# environment
+export EDITOR='emacsclient -t'
+export VISUAL='emacsclient -t'
+
+# aliases
+alias emacs="emacsclient -nw -c -a 'emacs'"
 ```
 
 ## Reference
 
--<https://github.com/hlissner/doom-emacs> -<https://github.com/hlissner/doom-emacs/blob/master/docs/getting_started.org> -<https://gist.github.com/ecthiender/b9db474e80113bdc18d472de1593eb3c>
+-<https://github.com/hlissner/doom-emacs>
+-<https://github.com/hlissner/doom-emacs/blob/master/docs/getting_started.org>
+-<https://gist.github.com/ecthiender/b9db474e80113bdc18d472de1593eb3c>
