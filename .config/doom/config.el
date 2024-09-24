@@ -77,7 +77,15 @@
 ;; they are implemented.
 
 
-;; Cursors
+;; set right Alt key to Meta key
+(setq mac-right-option-modifier 'meta)
+
+
+;; Activate emacs keybindings
+(setq evil-default-state 'emacs)
+
+
+;; Cursors in Evil-mode
 (progn
   (use-package! evil-terminal-cursor-changer
     :hook (tty-setup . evil-terminal-cursor-changer-activate))
@@ -88,19 +96,19 @@
   (setq evil-emacs-state-cursor 'hbar)) ; _
 
 
-;; Keybindings
+;; Keybindings in Evil-mode
 (progn
   (setq evil-disable-insert-state-bindings t)
   (evil-define-key 'insert 'global
-    (kbd "C-h") 'backward-delete-char-untabify
-    (kbd "C-k") 'kill-line
-    (kbd "C-f") 'forward-char
-    (kbd "C-b") 'backward-char
-    (kbd "C-d") 'delete-char
-    (kbd "C-n") 'next-line
-    (kbd "C-p") 'previous-line
-    (kbd "C-a") 'move-beginning-of-line
-    (kbd "C-e") 'move-end-of-line))
+                   (kbd "C-h") 'backward-delete-char-untabify
+                   (kbd "C-k") 'kill-line
+                   (kbd "C-f") 'forward-char
+                   (kbd "C-b") 'backward-char
+                   (kbd "C-d") 'delete-char
+                   (kbd "C-n") 'next-line
+                   (kbd "C-p") 'previous-line
+                   (kbd "C-a") 'move-beginning-of-line
+                   (kbd "C-e") 'move-end-of-line))
 
 
 ;; no startup message
@@ -167,3 +175,11 @@
   (map! :leader
         :desc "Toogle Treemacs follow mode"
         "t f" #'treemacs-follow-mode))
+
+
+;; Set Fonts
+(defun my/setup-fonts ()
+  (set-face-attribute 'default nil :font (font-spec :family "CaskaydiaMono NF" :size 12))
+  (set-fontset-font t 'hangul (font-spec :family "Nanum Myeongjo")))
+
+(add-hook 'after-init-hook #'my/setup-fonts)
