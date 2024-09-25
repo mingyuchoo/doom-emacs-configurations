@@ -77,12 +77,13 @@
 ;; they are implemented.
 
 
-;; set right Alt key to Meta key
+;; Set right Alt key to Meta key
 (setq mac-right-option-modifier 'meta)
+(setq mac-option-modifier 'meta)
 
 
-;; Activate emacs keybindings
-(setq evil-default-state 'emacs)
+;; Activate emacs keybindings: from `SPC` to `C-c`
+;;(setq evil-default-state 'emacs)
 
 
 ;; Cursors in Evil-mode
