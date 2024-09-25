@@ -84,6 +84,8 @@
 
 ;; Activate emacs keybindings: from `SPC` to `C-c`
 ;;(setq evil-default-state 'emacs)
+(global-set-key (kbd "C-h") 'delete-backward-char)
+
 
 
 ;; Cursors in Evil-mode
@@ -101,7 +103,7 @@
 (progn
   (setq evil-disable-insert-state-bindings t)
   (evil-define-key 'insert 'global
-                   (kbd "C-h") 'backward-delete-char-untabify
+                   (kbd "C-h") 'delete-backward-char
                    (kbd "C-k") 'kill-line
                    (kbd "C-f") 'forward-char
                    (kbd "C-b") 'backward-char
