@@ -1,0 +1,36 @@
+* Emacs Daemon
+** On macOS
+*** Run Emacs daemon when Login
+Create a Launch Agent plist file
+#+begin_src shell
+  mkdir -p ~/Library/LaunchAgents
+  vim ~/Library/LaunchAgents/com.emacs.daemon.plist
+#+end_src
+`com.emacs.daemon.plist`
+#+begin_src XML
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+ <plist version="1.0">
+   <dict>
+     <key>Label</key>
+     <string>com.emacs.daemon</string>
+     <key>ProgramArguments</key>
+     <array>
+       <string>/Users/<username>/Applications/Emacs.app/Contents/MacOS/emacs</string>
+       <string>--daemon</string>
+     </array>
+     <key>RunAtLoad</key>
+     <true/>
+     <key>KeepAlive</key>
+     <true/>
+   </dict>
+ </plist>
+#+end_src
+Load the Launch Agent
+#+begin_src shell
+  launchctl load ~/Library/LaunchAgents/com.emacs.daemon.plist
+#+end_src
+Unload the Launch Agent
+#+begin_src shell
+  launchctl unload ~/Library/LaunchAgents/com.emacs.daemon.plist
+#+end_src

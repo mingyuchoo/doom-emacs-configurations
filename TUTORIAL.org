@@ -11,3 +11,9 @@ frame 안에 여러 개로 분할된 화면 영역
 하나의 frame은 여러 window를 가질 수 있음
 *** Buffer (document)
 작업할 내용
+** Key Bindings
+*** Org-roam
+**** Insert Code Block
+#+begin_src elisp
+  C-c C-, s
+#+end_src
