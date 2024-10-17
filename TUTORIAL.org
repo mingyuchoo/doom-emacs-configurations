@@ -17,3 +17,7 @@ frame 안에 여러 개로 분할된 화면 영역
 #+begin_src elisp
   C-c C-, s
 #+end_src
+**** Insert a table
+#+begin_src elisp
+  C-c |
+#+end_src
